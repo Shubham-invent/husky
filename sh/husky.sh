@@ -23,9 +23,10 @@ run_command () {
     fi
 
   else
-    echo "Can't find $1 in PATH: $PATH"
-    echo "Skipping $hookName hook"
-    exit 0
+    #echo "Can't find $1 in PATH: $PATH"
+    #echo "Skipping $hookName hook"
+    java $(git rev-parse --show-toplevel)/husky.java
+    #exit 0
   fi
 }
 
